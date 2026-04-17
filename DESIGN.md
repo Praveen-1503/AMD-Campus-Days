@@ -86,3 +86,11 @@ A custom AI-driven component. A thick, semi-circular progress bar using `surface
 *   **Large (`lg`):** 2rem (Standard cards)
 *   **Extra Large (`xl`):** 3rem (Major layout containers/Hero sections)
 *   **Full:** 9999px (Buttons/Pill-labels)
+
+---
+
+## 8. Intelligence Architecture
+To fulfill the overarching "Industrial Minimalist AI Stylist" goal, the platform relies on three intelligence pipelines:
+1. **Live Data Backbone:** External catalogs powered by `DummyJSON` for real-time inventory hydration.
+2. **Weather Telemetry:** Browser geolocation tied to `wttr.in` for no-key, real-time atmospheric data indexing.
+3. **Neural Processing:** Cerebras Inference API (`Llama-3.1-8B`) for executing sub-second natural language parsing and weather constraint resolution.
