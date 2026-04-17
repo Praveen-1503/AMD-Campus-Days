@@ -91,29 +91,8 @@ export default function DiscoveryFeed() {
           Curated for the Synthetic Atelier.
         </h1>
         <p className="font-body text-secondary text-base sm:text-lg md:w-1/2 mb-8">
-          AI-powered retail intelligence analyzing {inventory.length} real-time products. Describe your vibe below — weather context included automatically.
+          Retail intelligence analyzing {inventory.length} real-time products contextually sorted.
         </p>
-
-        {/* AI Prompt Bar */}
-        <form onSubmit={handlePromptSubmit} className="relative group max-w-2xl mb-8">
-          <div className={`absolute -inset-1 rounded-full opacity-0 group-focus-within:opacity-100 transition duration-1000 blur-sm ` + (analyzing ? "bg-primary animate-pulse opacity-50" : "bg-primary/30")}></div>
-          <div className="relative flex items-center bg-surface_container_highest rounded-full px-4 sm:px-6 py-3 sm:py-4 border border-white/5">
-            {analyzing ? (
-              <Loader2 className="animate-spin text-primary mr-3 sm:mr-4 flex-shrink-0" size={22} />
-            ) : (
-              <Sparkles className="text-primary mr-3 sm:mr-4 group-focus-within:animate-pulse flex-shrink-0" size={22} />
-            )}
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="e.g. I need something technical and minimal for today's weather..."
-              className="bg-transparent flex-grow outline-none text-on_surface font-body text-sm sm:text-base placeholder:text-outline caret-primary"
-              disabled={analyzing}
-            />
-          </div>
-        </form>
-        {error && <p className="text-[#ff6e84] text-sm mt-2 font-body">{error}</p>}
 
         {/* Active Tags Display */}
         {activeTags.length > 0 && (
