@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-surface text-on_surface font-body antialiased;
+  }
+  
+  /* Hide scrollbar for clean aesthetics */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  /* Extreme Radius components */
+  .card-lg {
+    @apply rounded-lg bg-surface_container p-6;
+  }
+  .card-xl {
+    @apply rounded-xl bg-surface_container p-8;
+  }
+  
+  /* Tonal boundaries instead of borders */
+  .section-bg-shift {
+    @apply bg-surface_container_low;
+  }
+  
+  /* Glass and gradient */
+  .glass-nav {
+    @apply bg-surface_variant/60 backdrop-blur-[20px];
+  }
+  
+  .btn-primary {
+    @apply bg-primary-gradient rounded-full px-8 py-4 text-on_primary_container font-bold shadow-neon transition-transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface_container_highest text-on_surface rounded-xl px-8 py-4 transition-colors hover:bg-surface_variant;
+  }
+  
+  .btn-tertiary {
+    @apply text-primary font-medium hover:text-primary_dim transition-colors;
+  }
+  
+  /* Styling gauges and dynamic ranges */
+  .input-field {
+    @apply bg-surface_container_highest rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-primary focus:bg-surface_container transition-all;
+  }
+}
